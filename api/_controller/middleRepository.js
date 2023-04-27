@@ -17,10 +17,8 @@ const Repository = {
         return result;
     },
     insert : async (params) => {
-        console.log(params);
         const query = `insert into weather (temperature,wind_speed,day,comment)
                        values('${params.temperature}','${params.wind_speed}','${params.weather_date}','${params.comment}')`;
-        console.log(query);
         const [result] = await db.execute(query);
         return result;
     },
