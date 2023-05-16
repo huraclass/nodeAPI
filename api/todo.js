@@ -4,7 +4,6 @@ const todoController = require('./_controller/todoController');
 
 // create
 router.post("/", async (req, res) => {
-    console.log("post");
     const result = await todoController.create(req);
     res.json(result);
 });
